@@ -9,6 +9,7 @@ function Construct (options, callback) {
 	self._apos = options.apos;
 	self._app = options.app;
 	var blackList = options.blacklist;
+	console.log(blackList);
 	self._apos.mixinModuleAssets(self, 'browser-support', __dirname, options);
 	self._apos.pushGlobalData({blacklist: blackList });
 	self.pushAsset ('script', 'platform', {when: 'always'});
