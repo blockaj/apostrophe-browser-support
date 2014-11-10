@@ -9,4 +9,4 @@ In `modules`:
 			{name: 'browserName', version: 'browserVersion'}
 		]
 	},
-`browserVersion` should be the most recent version of the browser you do not want the browser to see. 
+`browserVersion` should be the most recent version of the browser you do not want the user to see. 
