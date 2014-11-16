@@ -1,3 +1,5 @@
+var fs = require('fs');
+
 module.exports = factory; 
 
 function factory(options, callback) {
@@ -8,27 +10,26 @@ function Construct (options, callback) {
 
 	self._apos = options.apos;
 	self._app = options.app;
-	var blackList = options.blacklist;
-	console.log(blackList);
-	self._apos.mixinModuleAssets(self, 'browser-support', __dirname, options);
-	self._apos.pushGlobalData({blacklist: blackList });
-	self.pushAsset ('script', 'platform', {when: 'always'});
-	self.pushAsset ('script', 'browserdetect', {when: 'always'});
-	self.pushAsset ('stylesheet', 'browser-support', {when: 'always'});
-	self.pushAsset ('template', 'oldbrowser', {when: 'always'});
 
-	// self._app.get('/apos/browser-support', function(req, res){
-	// 	self.browser = req.query.browser;
-	// 	self.version = req.query.version;
-	// 	console.log('User has logged on to site with: ' + self.browser + ' ' + self.version);
-	// 	if (self.browser = 'Chrome') {self.loader();}
-	// });
-	
-	// self.loader = function(req, callback) {
-	// 	console.log(req);
-	// 	req.template = self.renderer('oldbrowser');
-	// 	return callback(null);
-	// }
+	var blackList = options.blacklist;
+	var graylist = options.graylist;
+
+	self._apos.mixinModuleAssets(self, 'browser-support', __dirname, options);
+
+	fs.writeFileSync(__dirname + '/public/js/blacklist.js', 'window.blacklist = ' + JSON.stringify(blackList) + '; window.graylist = ' + JSON.stringify(graylist) + ';');
+
+	self.pushAsset ('script', 'platform', {when: 'always'});
+	self.pushAsset ('script', 'blacklist', {when: 'always'});
+	self.pushAsset ('script', 'browserdetect', {when: 'always'});
+	self.pushAsset ('stylesheet', 'modal-style', {when: 'always'});
+	self.pushAsset ('stylesheet', 'browser-support', {when: 'always'});
+	self.pushAsset ('template', 'modal', {when: 'always'});
+
+
+
+	self._app.get('/apos/browser-support/old-browser', function(req, res){
+		return res.send(self.render('oldbrowser'));
+	});
 
 	if (callback) {
 		return process.nextTick(function() {

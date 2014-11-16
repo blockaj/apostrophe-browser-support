@@ -1,0 +1,1 @@
+window.blacklist = [{"name":"IE","version":8}]; window.graylist = [{"name":"Chrome","version":38}];

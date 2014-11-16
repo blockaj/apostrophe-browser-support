@@ -1,19 +1,24 @@
-apos.on('ready', function() {
-	$('.apos-refreshable').css('display', 'none');
-	$('.oldbrowser').css('display', 'none');
-	console.log(apos.data.blacklist);
-	var blacklist = apos.data.blacklist;
-	var browserVersion = parseFloat(platform.version);
-
-	//Is there a better way to do this? I don't know one. 
-	for (var i = 0; i < blacklist.length; i++) {
-		if (platform.name == blacklist[i].name && browserVersion == blacklist[i].version) {
-			console.log('Stop');
-			//$('.apos-refreshable').css('display', 'none');
-			$('oldbrowser').css('display', 'block');
-		} else {
-			$('body').css('display', 'block');
-			//$('.oldbrowser').css('display', 'none');
-		}
+var blacklist = window.blacklist;
+var graylist = window.graylist;
+console.log(blacklist);
+for (var i = 0; i < blacklist.length; i++) {
+	var browser = blacklist[i].name,
+	    version = blacklist[i].version;
+	if (browser == platform.name && version <= parseFloat(platform.version)) {
+		window.location.href = '/apos/browser-support/old-browser';
 	}
-});
+}
+for (var i = 0; i < graylist.length; i++) {
+	var browser = graylist[i].name,
+		version = graylist[i].version;
+	if (browser == platform.name && version == parseFloat(platform.version)) {
+		console.log('hello');
+		$(document).ready(function(){
+			$('.graylist-modal-outer').show();
+			$('#hide_modal').click(function(){
+				$('.graylist-modal-outer').hide();
+			});
+		});
+		
+	}
+}
