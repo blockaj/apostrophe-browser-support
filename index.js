@@ -27,7 +27,7 @@ function Construct (options, callback) {
 
 
 
-	self._app.get('/apos/browser-support/old-browser', function(req, res){
+	self._app.get('/apos-browser-support/old-browser', function(req, res){
 		return res.send(self.render('oldbrowser'));
 	});
 
