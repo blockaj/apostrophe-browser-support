@@ -1,7 +1,17 @@
 <div class="graylist-modal-outer" style="display:none">
 	<div class="graylist-modal">	
-		<img id="hide_modal" src="Ps-x-button.png">
+		<canvas id="x-button" width="20px" height="20px">Get a new browser.</canvas><br/>
+		<script>
+		var xButton = document.getElementById('x-button');
+		var xButtonCanvas = xButton.getContext('2d');
+		xButtonCanvas.moveTo(0, 0);
+		xButtonCanvas.lineTo(20, 20);
+		xButtonCanvas.stroke();
+		xButtonCanvas.moveTo(20, 0);
+		xButtonCanvas.lineTo(0, 20);
+		xButtonCanvas.stroke();
+		</script>
 		<h2>Slow down!</h2>	
-		<p>Your browser is pretty old. We <i>suggest</i> you upgrade to a newer version of your browser so this website 	still looks good.</p>
+		<p>Your browser is pretty old. We <i>suggest</i> you upgrade to a newer version of your browser so this website still looks good.</p>
 	</div>
 </div>
