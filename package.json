@@ -1,15 +1,15 @@
 {
-	"name": "apostrophe-browser-support",
-	"version": "0.5.0",
-	"description": "Maintain the aesthetic of your website by restricting old browsers from seeing it.",
-	"main": "index.js",
-	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
-	},
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/blockaj/apostrophe-browser-support"
-	},
-	"author": "Aaron Block",
-	"license": "MIT"
+  "name": "apostrophe-browser-support",
+  "version": "0.5.1",
+  "description": "Maintain the aesthetic of your website by restricting old browsers from seeing it.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/blockaj/apostrophe-browser-support"
+  },
+  "author": "Aaron Block",
+  "license": "MIT"
 }
