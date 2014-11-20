@@ -1,4 +1,11 @@
 #apostrophe-browser-support
+##Table of Contents
+*	[Intro](#intro)
+*	[How to use it](#how-to-use-it)
+	*	[Blacklisting](#blacklisting)
+	*  [Graylisting](#graylisting)
+ 
+##Intro
 apostrophe-browser-support accepts a `blacklist` and `graylist` from the user. These lists will be used to either entirely restrict a user from seeing the website or warn them when they log-on that they are using a browser that is not recommended by the website owner. 
 
 In `modules` of `app.js`:
@@ -9,11 +16,6 @@ In `modules` of `app.js`:
 	]
 },
 ```
-##Table of Contents
-*	[How to use it](#how-to-use-it)
-	*	[Blacklisting](#blacklisting)
-	*  [Graylisting](#graylisting)
-
 ##How to use it
 ###Blacklisting  
 The blacklist is an array of browsers and browser versions that the website owner specifically does not want to see the website. All blacklisted browsers will be served a page telling them to update or install a new browser if they want to view the site. 
