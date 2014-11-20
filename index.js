@@ -13,6 +13,8 @@ function Construct (options, callback) {
 
 	var blackList = options.blacklist;
 	var graylist = options.graylist;
+	console.log(require.main.filename);
+
 
 	self._apos.mixinModuleAssets(self, 'browser-support', __dirname, options);
 

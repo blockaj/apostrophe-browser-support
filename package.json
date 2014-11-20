@@ -10,6 +10,18 @@
     "type": "git",
     "url": "https://github.com/blockaj/apostrophe-browser-support"
   },
-  "author": "Aaron Block",
-  "license": "MIT"
+  "author": {
+    "name": "Aaron Block"
+  },
+  "license": "MIT",
+  "readme": "#apostrophe-browser-support\nAn amazing little apostrophe module that does everything you could ever dream of. \n\n##How to use it\nIn `modules`:\n\t\n\t'apostrophe-browser-support': {\n\t\tblacklist: [\n\t\t\t{name: 'browserName', version: 'browserVersion'}\n\t\t]\n\t},\n`browserVersion` should be the most recent version of the browser you do not want the user to see. ",
+  "readmeFilename": "README.md",
+  "gitHead": "d2e5a4e11c354833b529d063eadbea0e4b6b1952",
+  "bugs": {
+    "url": "https://github.com/blockaj/apostrophe-browser-support/issues"
+  },
+  "homepage": "https://github.com/blockaj/apostrophe-browser-support",
+  "_id": "apostrophe-browser-support@0.5.1",
+  "_shasum": "c5bdcb52abeeab1ba6cf6cefb722ca3e3ad50fff",
+  "_from": "apostrophe-browser-support@0.5.x"
 }
