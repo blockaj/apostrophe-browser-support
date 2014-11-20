@@ -21,16 +21,15 @@ for (var i = 0; i < blacklist.length; i++) {
 			}
 		}
 	}
-	
 }
 for (var i = 0; i < graylist.length; i++) {
 	var browser = graylist[i].name.toLowerCase(),
 		version = graylist[i].version,
 		platformName = platform.name.toLowerCase(),
 		includeOlder = graylist[i].includeOlder;
-
+	console.log(includeOlder);
 	if (includeOlder) {
-		if (browser == platformName && version <= parseFloat(platform.version)) {
+		if (browser == platformName && parseFloat(platform.version) <= version) {
 			hideModal();
 		}
 	} else {
