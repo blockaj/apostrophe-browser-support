@@ -9,7 +9,10 @@ In `modules` of `app.js`:
 	]
 },
 ```
-
+##Table of Contents
+*	[How to use it](#how-to-use-it)
+	*	[Blacklisting](#blacklisting)
+	*  [Graylisting](#graylisting)
 
 ##How to use it
 ###Blacklisting  
