@@ -1,16 +1,9 @@
 <div class="graylist-modal-outer" style="display:none">
-	<div class="graylist-modal">	
-		<canvas id="x-button" width="20px" height="20px">Get a new browser.</canvas><br/>
-		<script>
-		var xButton = document.getElementById('x-button');
-		var xButtonCanvas = xButton.getContext('2d');
-		xButtonCanvas.moveTo(0, 0);
-		xButtonCanvas.lineTo(20, 20);
-		xButtonCanvas.stroke();
-		xButtonCanvas.moveTo(20, 0);
-		xButtonCanvas.lineTo(0, 20);
-		xButtonCanvas.stroke();
-		</script>
+	<div class="graylist-modal">
+		<div id="x">
+			<div class="first-line"></div>
+			<div class="second-line"></div>
+		</div>	
 		<h2>Slow down!</h2>	
 		<p>Your browser is pretty old. We <i>suggest</i> you upgrade to a newer version of your browser so this website still looks good.</p>
 	</div>

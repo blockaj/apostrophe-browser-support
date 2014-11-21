@@ -43,7 +43,7 @@ for (var i = 0; i < graylist.length; i++) {
 function hideModal() {
 	$(document).ready(function(){
 		$('.graylist-modal-outer').show();
-		$('#x-button').click(function(){
+		$('#x').click(function(){
 			$('.graylist-modal-outer').hide();
 		});
 	});
