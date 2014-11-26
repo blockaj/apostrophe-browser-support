@@ -1,6 +1,6 @@
 {
   "name": "apostrophe-browser-support",
-  "version": "0.5.3",
+  "version": "0.5.4",
   "description": "Maintain the aesthetic of your website by restricting old browsers from seeing it.",
   "main": "index.js",
   "scripts": {
