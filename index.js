@@ -9,15 +9,14 @@ function Construct (options, callback) {
 	var self = this;
 	self._apos = options.apos;
 	self._app = options.app;
-	var blackList = options.blacklist;
-	var graylist = options.graylist;
-	console.log(require.main.filename);
+	var blacklist = options.blacklist || [];
+	var graylist = options.graylist || [];
 
 	self._apos.mixinModuleAssets(self, 'browser-support', __dirname, options);
 
 	//Create a js file with the blacklist and graylist from options and make it available to the client before everything loads
 	fs.readFile(__dirname + '/public/js/browserdetect.js', 'utf8', function (err, data){
-		fs.writeFileSync(__dirname + '/public/js/browser-support.js', 'var blacklist = ' + JSON.stringify(blackList) + '; var graylist = ' + JSON.stringify(graylist) + ';' + data
+		fs.writeFileSync(__dirname + '/public/js/browser-support.js', 'var blacklist = ' + JSON.stringify(blacklist) + '; var graylist = ' + JSON.stringify(graylist) + ';' + data
 		);
 		//self.pushAsset ('script', 'blacklist', {when: 'always'});
 		self.pushAsset ('script', 'jquery.cookie', {when: 'always'});
