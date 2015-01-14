@@ -5,7 +5,7 @@ for (var i = 0; i < blacklist.length; i++) {
 	    ignoreOlder = blacklist[i].ignoreOlder;
 
 	if (ignoreOlder) {
-		if (browser == platform.name && parseFloat(platform.version) == version) {
+		if (browser == platformName && parseFloat(platform.version) == version) {
 			if (window.location.href != '/apos-browser-support/old-browser') {
 				window.location.href = '/apos-browser-support/old-browser';
 			}

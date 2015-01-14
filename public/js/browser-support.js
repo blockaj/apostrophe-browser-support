@@ -1,4 +1,4 @@
-var blacklist = [{"name":"IE","version":40}]; var graylist = [{"name":"Chrome","version":"40","includeOlder":true}];for (var i = 0; i < blacklist.length; i++) {
+var blacklist = [{"name":"Chrome","version":41}]; var graylist = [{"name":"Chrome","version":"40","includeOlder":true}];for (var i = 0; i < blacklist.length; i++) {
 	var browser = blacklist[i].name.toLowerCase(),
 	    version = blacklist[i].version,
 	    platformName = platform.name.toLowerCase(),
